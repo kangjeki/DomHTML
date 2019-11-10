@@ -51,7 +51,7 @@ Load Manual HTML Elements, put html elements in parameter
 			querySelector(<i>param</i>);
 		</td>
 		<td>
-			"table" <br>
+			"select" <br>
 			"#select" <br>
 			".select" 
 		</td>
