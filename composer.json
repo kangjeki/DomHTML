@@ -1,9 +1,5 @@
 {
     "name": "jc_programs/dom_parser_html",
     "description": "Get Access HTML element with PHP",
-    "require": {
-        "php": "^7.3",
-        "DOMParserHTML/Parser": "1.*"
-    },
     "license"		: "Apache-2.0"
 }
