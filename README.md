@@ -5,7 +5,11 @@ Get Elements HTML with Parsing Object
 
 		$ git clone https://github.com/kangjeki/DOMParserHTML.git
 
-<h2>Use</h2>
+<h2>Composer</h2>
+
+		composer require jc_programs/dom-parser-html
+
+<h2>Usage</h2>
 
 Load Default HTML in Active Page
 
