@@ -1,0 +1,8 @@
+{
+    "name": "DOMParserHTML/Parser",
+    "description": "Get Access HTML element with PHP",
+    "require": {
+        "php": "^7.3",
+        "DOMParserHTML/Parser": "1.*"
+    }
+}
