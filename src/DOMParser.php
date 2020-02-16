@@ -5,7 +5,7 @@
  * @github  https://github.com/kangjeki
  * @author  JC_Programs | Imam Nasrudin <otakpentium404@gmail.com>
 **/
-namespace DOMParserHTML\Parser;
+namespace DOMParserHTML;
 
 /* 
  * Public DOM method

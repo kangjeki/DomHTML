@@ -4,12 +4,12 @@
  * @github  https://github.com/kangjeki
  * @author  JC_Programs | Imam Nasrudin <otakpentium404@gmail.com>
 **/
-namespace DOMParserHTML\Parser;
+namespace DOMParserHTML;
 
 /* 
  * This is a prser page / Generate HTML file to DOM Selector
 **/
-Abstract class HTMLParser {
+class HTMLParser {
 	protected 	$tagCollect 	= [],
 				$elCollect 		= [],
 				$doc;
@@ -65,8 +65,6 @@ Abstract class HTMLParser {
 			}
 		}
 	}
-
-	abstract function domParser($data);
 
 	// protected function pairedElement() {
 	// 	$tagLib 	= ["a", "abbr", "acronym", "address", "applet", "article", "aside", "audio", "b", "basefont", "bdi", "bdo", "big", "blockquote", "body", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "dir", "div", "dl", "dt", "em", "embed", "fieldset", "figcaption", "figure", "font", "footer", "form", "frame", "frameset", "h6", "head", "header", "hr", "html", "i", "iframe", "ins", "kbd", "label", "legend", "li", "main", "map", "mark", "meta", "meter", "nav", "noframes", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "script", "section", "select", "small", "source", "span", "strike", "strong", "style", "sub", "summary", "sup", "svg", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "title", "tr", "tt", "u", "ul", "var", "video"];
