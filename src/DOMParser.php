@@ -1,13 +1,14 @@
 <?php
 
-/* this source pulish on github;
+/**
+ * this source pulish on github;
  * 
  * @github  https://github.com/kangjeki
- * @author  JC_Programs | Imam Nasrudin <otakpentium404@gmail.com>
+ * @author  kangjeki | Imam Nasrudin <otakpentium404@gmail.com>
 **/
 namespace DOMParserHTML;
 
-/* 
+/** 
  * Public DOM method
 **/
 

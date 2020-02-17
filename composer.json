@@ -1,5 +1,11 @@
 {
-    "name"				: "mr_jc/dom-parser-html",
+    "name"				: "jcbooster/domhtml",
     "description"		: "Get Access HTML element with PHP",
-    "license"			: "Apache-2.0"
+    "license"			: "Apache-2.0",
+    "authors": [
+        {
+            "name": "kangjeki",
+            "email": "imamjeki@gmail.com"
+        }
+    ]
 }

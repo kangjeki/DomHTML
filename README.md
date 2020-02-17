@@ -14,14 +14,14 @@ Get Elements HTML with Parsing Object
 Load Default HTML in Active Page
 
     require  __DIR__ . '/DOMParserHTML/Autoload.php';
-    use DOMParserHTML\Parser\DOMParser;
+    use DOMParserHTML\DOMParser;
     
     $Doc 	= new DOMParser;
     
 Load Manual HTML Elements, put html elements in parameter
 
     require  __DIR__ . '/DOMParserHTML/Autoload.php';
-    use DOMParserHTML\Parser\DOMParser;
+    use DOMParserHTML\DOMParser;
     
     $Doc 	= new DOMParser($html);
     

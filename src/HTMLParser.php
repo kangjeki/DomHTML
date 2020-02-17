@@ -1,12 +1,13 @@
 <?php
-/* this source pulish on github;
+/**
+ * this source pulish on github;
  * 
  * @github  https://github.com/kangjeki
- * @author  JC_Programs | Imam Nasrudin <otakpentium404@gmail.com>
+ * @author  kangjeki | Imam Nasrudin <otakpentium404@gmail.com>
 **/
 namespace DOMParserHTML;
 
-/* 
+/** 
  * This is a prser page / Generate HTML file to DOM Selector
 **/
 class HTMLParser {
@@ -33,7 +34,7 @@ class HTMLParser {
 			$_rollswitchTag = 1;
 		}
 
-		/* -------------------------------------------------------------------------------
+		/** -------------------------------------------------------------------------------
 		 * tagging html structrue
 		**/
 		preg_match_all("|<([^>]+)>|i", $this->doc, $allTagMatch, PREG_SET_ORDER );
@@ -45,7 +46,7 @@ class HTMLParser {
 			if ( preg_match( "|</html(.*)|", $tagCt[0] ) === 1 ) { $_rollswitchTag = 0; }	
 		}
 
-		/* -------------------------------------------------------------------------------
+		/** -------------------------------------------------------------------------------
 		 * element html structure 
 		**/
 		$ColectorElements 	= [];
@@ -129,7 +130,7 @@ class HTMLParser {
 				}
 			
 				if ( $rollElementID >= 1 ) {
-					/* -----------------------------------------
+					/** -----------------------------------------
 					 * Pull Colect Element Matchs is not void
 					**/
 					$pullCollectID[] = $elem;
@@ -145,7 +146,7 @@ class HTMLParser {
 		}
 
 		$finalPullID[] = implode("", $pullCollectID);
-		/*
+		/**
 		 * Final Retrun element id
 		**/
 		return $finalPullID[0];
@@ -196,7 +197,7 @@ class HTMLParser {
 				}
 			
 				if ( $rollElementCLASS >= 1 ) {
-					/*
+					/**
 					 * Pull Colect Element Matchs
 					**/
 					$pullCollectCLASS[$rollIndex][] = $elem;
@@ -215,7 +216,7 @@ class HTMLParser {
 			$finalPullCLASS[] = implode("", $pull);
 		}
 		
-		/*
+		/**
 		 * Final Retrun element id
 		**/
 		if ( $collect == false ) {
@@ -234,7 +235,7 @@ class HTMLParser {
 		$openLength 			= strlen($openTag);
 		$endLength 				= strlen($endTag);
 
-		/* -------------------------------------------------------------------------------------
+		/** -------------------------------------------------------------------------------------
 		 * create Identify first Match tag index 0;
 		**/
 		foreach ( $this->tagCollect as $key => $tgs ) { 
@@ -248,7 +249,7 @@ class HTMLParser {
 			}
 		}
 
-		/* -------------------------------------------------------------------------------------
+		/** -------------------------------------------------------------------------------------
 		 * exec and filter type of tag
 		**/
 		if ( $this->voidElement($tag) == true ) {
@@ -264,7 +265,7 @@ class HTMLParser {
 			}
 		}
 		else {
-			/* -------------------------------------------------------------------------------------
+			/** -------------------------------------------------------------------------------------
 			 * log elemCollection
 			**/
 			foreach ( $this->elCollect as $elem ) {
@@ -279,7 +280,7 @@ class HTMLParser {
 			$rollPlus 	= 0;
 			$rollNode 	= 0;
 			foreach ( $this->elCollect as $elem ) {
-				/* identify open tag*/
+				/** identify open tag*/
 				$reTG 	= $this->detectTagIs($elem);
 				if ( $this->detectTagIs($elem) !== "" ) {
 					if ( "<" . $this->detectTagIs($elem) == $openTag ) {
@@ -305,7 +306,7 @@ class HTMLParser {
 				}
 			}	
 
-			/*
+			/**
 			 * flex all group tag to finish selector
 			**/
 			foreach($execPull as $elFIN) {
@@ -322,7 +323,7 @@ class HTMLParser {
 		return $finalSelctor;
 	}
 
-	/* --------------------------------------------------------------------------------------------------------------
+	/** --------------------------------------------------------------------------------------------------------------
 	 * Metode Selector Tag Index 0
 	**/
 	public function querySelector($selector = false) {
@@ -347,7 +348,7 @@ class HTMLParser {
 		}
 	}
 
-	/* --------------------------------------------------------------------------------------------------------------
+	/** --------------------------------------------------------------------------------------------------------------
 	 * Metode Selector All
 	**/
 	public function querySelectorAll($selector = false) {
@@ -372,7 +373,7 @@ class HTMLParser {
 		}
 	}
 
-	/* --------------------------------------------------------------------------------------------------------------
+	/** --------------------------------------------------------------------------------------------------------------
 	 * Metode get Elements By Tag
 	**/
 	public function getElementsByTagName($tagName = false) {
@@ -384,7 +385,7 @@ class HTMLParser {
 		}
 	}
 
-	/* --------------------------------------------------------------------------------------------------------------
+	/** --------------------------------------------------------------------------------------------------------------
 	 * Metode get Elements By Class
 	**/
 	public function getElementsByClassName($className = false) {
@@ -396,7 +397,7 @@ class HTMLParser {
 		}
 	}
 
-	/* --------------------------------------------------------------------------------------------------------------
+	/** --------------------------------------------------------------------------------------------------------------
 	 * Metode get Elements By Id
 	**/
 	public function getElementById($idName = false) {
